@@ -63,7 +63,7 @@ const DisplaySocialLink = ({ linkType, raw }) => {
 
   let href = raw;
   let display = raw;
-  let imgsrc = social_url;
+  let imgsrc = "/assets/social_url.svg";
 
   switch (linkType) {
     case "url":
@@ -75,7 +75,7 @@ const DisplaySocialLink = ({ linkType, raw }) => {
 
     case "email":
       href = `mailto:${raw}`;
-      imgsrc = social_email;
+      imgsrc = "/assets/social_email.svg";
       break;
 
     case "facebook":
@@ -83,18 +83,18 @@ const DisplaySocialLink = ({ linkType, raw }) => {
         .replace(/^https?:\/\//, "")
         .replace(/\/$/, "")
         .replace(/^www\./, "");
-      imgsrc = social_facebook;
+      imgsrc = "/assets/social_facebook.svg";
       break;
 
     case "instagram":
       href = `https://instagram.com/${raw}`;
-      imgsrc = social_instagram;
+      imgsrc = "/assets/social_instagram.svg";
       break;
 
     case "twitter":
       href = `https://twitter.com/${raw}`;
       display = `@${raw}`;
-      imgsrc = social_twitter;
+      imgsrc = "/assets/social_twitter.svg";
       break;
 
     default:
